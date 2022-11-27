@@ -8,6 +8,7 @@ namespace VisualNovelAPI.Models
             public string? VoiceActor { get; set; }
             public string? CharacterRole { get; set; }
             public string? Gender { get; set; }
+            public VisualNovel? VisualNovel { get; set; }
     }
 }
 
