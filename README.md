@@ -1,5 +1,12 @@
 # VisualNovel API
 
+## Setup
+
+Using my SQL script should set up the database and include 1 entry for the visual novel and character table. Inside the appsettings.json change the credentials of the database based on the local machine. 
+
+For the endpoints, it would be `visualnovel, visualnovel/{id}, character, character/{id}` <br>
+For the HTTP methods, I have implemented GET, POST, and DELETE
+
 ## Routes
 
 ## GET requests
@@ -24,7 +31,9 @@ GET `https://localhost:7063/api/visualnovel/`
 ```
 
 GET `https://localhost:7063/api/character/{optional field of ID}`
+
 Returns array of all characters, if the ID is specified then it only returns the character with that ID, if the ID does not exist then it returns an error 404 with the message "Error, this character ID does not exist!"
+
 Example Request: 
 GET `https://localhost:7063/api/character/`
 
@@ -103,8 +112,3 @@ DELETE `https://localhost:7063/api/character/1`
 ## NOTES
 
 Initially I had the foreign key in my character table, which I have moved to my visual novel table as I realized multiple characters would be going to the visual novels and not the other way around. 
-
-Using my SQL script should create a character and visual novel which can be used for testing the first ID. 
-
-
-
