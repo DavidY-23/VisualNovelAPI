@@ -25,7 +25,6 @@ GET `https://localhost:7063/api/visualnovel/`
         "languages": "English, Japanese",
         "genre": "Slice-of-life",
         "developer": "Key",
-        "character": null
     }
 ]
 ```
@@ -44,7 +43,8 @@ GET `https://localhost:7063/api/character/`
         "characterName": "Nagisa Furukawa",
         "voiceActor": "Mai Nakahara",
         "characterRole": "Main",
-        "gender": "Female"
+        "gender": "Female",
+        "visualNovelID": 1
     }
 ]
 ```
@@ -72,7 +72,6 @@ Which returns:
     "languages": "English, Japanese",
     "genre": "Mystery",
     "developer": "07th Expansion",
-    "character": null
 }
 ```
 
@@ -94,22 +93,22 @@ Which returns
     "characterName": "Battler Ushiromiya",
     "voiceActor": "Daisuke Ono",
     "characterRole": "Main",
-    "gender": "Male"
+    "gender": "Male",
+    "visualNovelID": 2
 }
 ```
 ## DELETE Requests
 
 Deletes a visual novel based on their ID, if success it should say `Successfully deleted visual novel entry!`, if unsuccessful should say `Error, this visual novel ID does not exist!`
+In order to delete a visual novel, if there's character tied to it, you'll need to delete the character first. 
 
 Example Request:
 DELETE `https://localhost:7063/api/visualnovel/1`
 
 Deletes a character based on their ID, if success it should say `Successfully deleted character!`, if unsuccessful should say `Error this character ID does not exist!`
-In order to delete a character, if there's visual novel tied to it, you'll need to delete the visual novel first. 
 
 Example Request:
 DELETE `https://localhost:7063/api/character/1`
 
 ## NOTES
-
-Initially I had the foreign key in my character table, which I have moved to my visual novel table as I realized multiple characters would be going to the visual novels and not the other way around. 
+---
