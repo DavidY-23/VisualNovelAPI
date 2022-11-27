@@ -105,6 +105,7 @@ Example Request:
 DELETE `https://localhost:7063/api/visualnovel/1`
 
 Deletes a character based on their ID, if success it should say `Successfully deleted character!`, if unsuccessful should say `Error this character ID does not exist!`
+In order to delete a character, if there's visual novel tied to it, you'll need to delete the visual novel first. 
 
 Example Request:
 DELETE `https://localhost:7063/api/character/1`
