@@ -83,7 +83,8 @@ PUT `https://localhost:7063/api/character/`
     "characterName": "Battler Ushiromiya",
     "voiceActor": "Daisuke Ono",
     "characterRole": "Main",
-    "gender": "Male"
+    "gender": "Male",
+    "visualNovelID": 2
 }
 ```
 Which returns
