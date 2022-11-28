@@ -54,7 +54,7 @@ POST
 Adds a new entry to the visual novel table, provided you enter all the required fields. 
 
 Example Request:
-PUT `https://localhost:7063/api/visualnovel/`
+POST `https://localhost:7063/api/visualnovel/`
 
 ```
 {
@@ -77,7 +77,7 @@ Which returns:
 
 Adds a new entry to the character table, provided you enter all the required fields. 
 Example Request:
-PUT `https://localhost:7063/api/character/`
+POST `https://localhost:7063/api/character/`
 ```
 {
     "characterName": "Battler Ushiromiya",
